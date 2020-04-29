@@ -1,0 +1,592 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 5,
+        "name": "User should add a customer successfully",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 4073145900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on Home page",
+            "match": {
+              "location": "MyStepdefs.iAmOnHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1337049600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on BankManagerLogin button",
+            "match": {
+              "location": "MyStepdefs.iClickOnBankManagerLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 493052400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on Add Customer button",
+            "match": {
+              "location": "MyStepdefs.iClickOnAddCustomerButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 549803800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I enter First name",
+            "match": {
+              "location": "MyStepdefs.iEnterFirstName()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 215243900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter Last name \"Snape\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Snape",
+                  "offset": 19
+                }
+              ],
+              "location": "MyStepdefs.iEnterLastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 237450000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I enter Post code \"HG3 14WB\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HG3 14WB",
+                  "offset": 19
+                }
+              ],
+              "location": "MyStepdefs.iEnterPostCode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163581400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click on Add Customer button",
+            "match": {
+              "location": "MyStepdefs.iClickOnAddCustomerButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 270130900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should add customer successfully",
+            "match": {
+              "location": "MyStepdefs.iShouldAddCustomerSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 206992900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I click on Open Account button",
+            "match": {
+              "location": "MyStepdefs.iClickOnOpenAccountButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 820639200,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I search for the customer by name that I added",
+            "match": {
+              "location": "MyStepdefs.iSearchForTheCustomerByNameThatIAdded()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 277225300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I select currency Pound",
+            "match": {
+              "location": "MyStepdefs.iSelectCurrencyPound()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 238025200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I should open account successfully",
+            "match": {
+              "location": "MyStepdefs.iShouldOpenAccountSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 232430200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I click on Home button",
+            "match": {
+              "location": "CustomerSteps.iClickOnHomeButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 329600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I am on Home page",
+            "match": {
+              "location": "MyStepdefs.iAmOnHomePage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 34456462600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "User should login to their account successfully",
+        "description": "",
+        "id": "customer-feature;user-should-login-to-their-account-successfully",
+        "after": [
+          {
+            "result": {
+              "duration": 172700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 245960200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I click on CustomerLogin button",
+            "match": {
+              "location": "CustomerSteps.iClickOnCustomerLoginButton()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 487148100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I search for my name",
+            "match": {
+              "location": "CustomerSteps.iSearchForMyName()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 193753200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I click on Login button",
+            "match": {
+              "location": "CustomerSteps.iClickOnLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 716054300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I should login successfully",
+            "match": {
+              "location": "CustomerSteps.iShouldLoginSuccessfully()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "User should add a customer successfully",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 444500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I am on Home page",
+            "match": {
+              "location": "MyStepdefs.iAmOnHomePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1773345700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on BankManagerLogin button",
+            "match": {
+              "location": "MyStepdefs.iClickOnBankManagerLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2202298000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click on Add Customer button",
+            "match": {
+              "location": "MyStepdefs.iClickOnAddCustomerButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 629965900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I enter First name",
+            "match": {
+              "location": "MyStepdefs.iEnterFirstName()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 277823800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I enter Last name \"Snape\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Snape",
+                  "offset": 19
+                }
+              ],
+              "location": "MyStepdefs.iEnterLastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 201572800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I enter Post code \"HG3 14WB\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HG3 14WB",
+                  "offset": 19
+                }
+              ],
+              "location": "MyStepdefs.iEnterPostCode(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165168100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I click on Add Customer button",
+            "match": {
+              "location": "MyStepdefs.iClickOnAddCustomerButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 195160600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I should add customer successfully",
+            "match": {
+              "location": "MyStepdefs.iShouldAddCustomerSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 196488500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I click on Open Account button",
+            "match": {
+              "location": "MyStepdefs.iClickOnOpenAccountButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 441250000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I search for the customer by name that I added",
+            "match": {
+              "location": "MyStepdefs.iSearchForTheCustomerByNameThatIAdded()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 292966100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I select currency Pound",
+            "match": {
+              "location": "MyStepdefs.iSelectCurrencyPound()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 202905000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I should open account successfully",
+            "match": {
+              "location": "MyStepdefs.iShouldOpenAccountSuccessfully()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 243012100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I click on Home button",
+            "match": {
+              "location": "CustomerSteps.iClickOnHomeButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 277300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I am on Home page",
+            "match": {
+              "location": "MyStepdefs.iAmOnHomePage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 14765224500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Verify the message when user makes a deposit in their account",
+        "description": "",
+        "id": "customer-feature;verify-the-message-when-user-makes-a-deposit-in-their-account",
+        "after": [
+          {
+            "result": {
+              "duration": 52100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 156425100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click on CustomerLogin button",
+            "match": {
+              "location": "CustomerSteps.iClickOnCustomerLoginButton()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 508437000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I search for my name",
+            "match": {
+              "location": "CustomerSteps.iSearchForMyName()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 220388800,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I click on Login button",
+            "match": {
+              "location": "CustomerSteps.iClickOnLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 394367900,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on Deposit tab",
+            "match": {
+              "location": "CustomerSteps.iClickOnDepositTab()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 864413400,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I enter amount to be deposited",
+            "match": {
+              "location": "CustomerSteps.iEnterAmountToBeDeposited()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 186985400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I click on Deposit button",
+            "match": {
+              "location": "CustomerSteps.iClickOnDepositButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128809500,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I should see a message displayed \"Deposit Successful\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Deposit Successful",
+                  "offset": 34
+                }
+              ],
+              "location": "CustomerSteps.iShouldSeeAMessageDisplayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Customer Feature",
+    "description": "\r\nAs a user I want to login and make a deposit",
+    "id": "customer-feature",
+    "keyword": "Feature",
+    "uri": "src/test/java/com/bank/resources/featurefile/customer.feature"
+  }
+]

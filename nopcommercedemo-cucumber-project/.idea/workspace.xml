@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db3ca03e-70fc-4997-8fb0-04c087b006e1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b4Y8ltX2sR7VOBjUbSpGSWu3yK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Clone Repositories/Jay/selenium-practice 2-Jay" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\nopcommercedemo-cucumber-project" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CukeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="nopcommercedemo-cucumber-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.nopcommerce.cucumber.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demo.nopcommerce.cucumber" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.nopcommerce.cucumber.CukeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CukeTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db3ca03e-70fc-4997-8fb0-04c087b006e1" name="Default Changelist" comment="" />
+      <created>1587892676230</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587892676230</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1779" y="120" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1588086518526">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1779" y="120" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588086518526" />
+    <state x="1830" y="224" width="461" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588062565223">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1830" y="224" width="461" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588062565223" />
+    <state x="1829" y="120" key="FileChooserDialogImpl" timestamp="1588086331691">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587913841550" />
+    <state x="1829" y="120" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588086331691" />
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom" timestamp="1588093146030">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588092150671" />
+    <state width="1323" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588093146030" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587931079844" />
+    <state width="1323" height="228" key="GridCell.Tab.0.center" timestamp="1588093146029">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588092150671" />
+    <state width="1323" height="228" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588093146029" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587931079842" />
+    <state width="1323" height="228" key="GridCell.Tab.0.left" timestamp="1588093146029">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588092150671" />
+    <state width="1323" height="228" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588093146029" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587931079841" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right" timestamp="1588093146029">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="343" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588092150671" />
+    <state width="1323" height="228" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588093146029" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587931079843" />
+    <state x="1745" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1587982575472">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1745" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1587982575472" />
+    <state x="65" y="67" key="new project wizard" timestamp="1587913967545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="67" key="new project wizard/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1587913967545" />
+    <state x="1801" y="286" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1588091549156">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1801" y="286" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588091549156" />
+    <state x="1755" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1588067674464">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1755" y="0" key="refactoring.ChangeSignatureDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588067674464" />
+    <state x="1705" y="162" width="672" height="677" key="run.anything.popup" timestamp="1588065573513">
+      <screen x="1366" y="0" width="1366" height="728" />
+    </state>
+    <state x="1705" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588065573513" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588117647585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1588117647585" />
+    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1588079873543" />
+  </component>
+</project>

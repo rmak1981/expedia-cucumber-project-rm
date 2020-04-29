@@ -1,0 +1,1741 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+							<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Apr 28, 2020 05:39:41 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.2</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>21</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>149</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Book Feature</span>
+						<span class='test-time'>Apr 28, 2020 05:39:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='2' status='pass'>
+	<span class='duration right label'>0h 0m 32s+232ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should navigate to Book page successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='4' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Book Link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should navigate to Book page successfully</span>
+				<div class='pre'>Verify text: Books is displayed [[ChromeDriver: chrome on WINDOWS (ea6cc366fee561e68bb7fe51a582fd47)] -> xpath: //h1[contains(text(),'Books')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='6' status='pass'>
+	<span class='duration right label'>0h 0m 31s+249ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should see results on Book page sorted by AtoZ</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='7' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Book Link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I sort books by Name: A to Z</span>
+				<div class='pre'>Select to sort Books by alphabetical order AtoZ from drop down [[ChromeDriver: chrome on WINDOWS (006957f4bb884404ce644954ae8b4fbb)] -> css selector: select#products-orderby]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='10' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should see the products displayed on the books page sorted by alphabetic order</span>
+				<div class='pre'>Verify that books: [Fahrenheit 451 by Ray Bradbury, First Prize Pies, Pride and Prejudice] are sorted AtoZ [[ChromeDriver: chrome on WINDOWS (006957f4bb884404ce644954ae8b4fbb)] -> xpath: //div[@class='product-grid']//h2/a]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='11' status='pass'>
+	<span class='duration right label'>0h 0m 23s+22ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should see prices on Books page sorted by LowToHigh</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='12' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='13' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Book Link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I sort books by Price: Low to High</span>
+				<div class='pre'>Select to sort prices of Books Low to High from drop down [[ChromeDriver: chrome on WINDOWS (5c637e82846be2451dea2d8c3e32c8e4)] -> css selector: select#products-orderby]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should see the products displayed on the books page sorted by prices in ascending order</span>
+				<div class='pre'>Verify that books: [$24.00, $27.00, $51.00] are sorted Low to High [[ChromeDriver: chrome on WINDOWS (5c637e82846be2451dea2d8c3e32c8e4)] -> xpath: //span[@class='price actual-price']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Computer Feature</span>
+						<span class='test-time'>Apr 28, 2020 05:41:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='17' status='pass'>
+	<span class='duration right label'>0h 0m 21s+925ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">As a user I want to navigate to computer page successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='18' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='19' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Computer link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='20' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I navigate to Computer page successfully</span>
+				<div class='pre'>Verify text: Computers is displayed on Computer page [[ChromeDriver: chrome on WINDOWS (9681bebf3b941532ebbeb578beb14e53)] -> xpath: //div[@class='page-title']/h1]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='21' status='pass'>
+	<span class='duration right label'>0h 0m 53s+785ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">As a user I want to select Build my own Computer product successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='22' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='23' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Computer link</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='24' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I navigate to Computer page successfully</span>
+				<div class='pre'>Verify text: Computers is displayed on Computer page [[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> xpath: //div[@class='page-title']/h1]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='25' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I click on Desktop link</span>
+				<div class='pre'>Click on Desktop link: [[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> xpath: //li[@class='inactive']//a[@href='/desktops']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='26' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I select build your own computer</span>
+				<div class='pre'>Click on Build your own Computer[[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> xpath: //h2[@class='product-title']/a[contains(text(),'Build your own computer')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='27' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I select HDD</span>
+				<div class='pre'>Click on hdd 400GB radio button[[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> id: product_attribute_3_7]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='28' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I click on add to cart</span>
+				<div class='pre'>Click on add to cart button[[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> id: add-to-cart-button-1]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='29' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then The product is added successfully</span>
+				<div class='pre'>Verify text: The product has been added to your shopping cart is displayed on adding product to cart [[ChromeDriver: chrome on WINDOWS (5d91266999a133aa70f2fe20fe1c5813)] -> xpath: //p[@class='content']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Login Feature</span>
+						<span class='test-time'>Apr 28, 2020 05:42:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='31' status='pass'>
+	<span class='duration right label'>0h 0m 19s+359ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should navigate to Login page successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='32' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='33' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Login Link</span>
+				<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (15e777054a4998576aa2140d18b60a5d)] -> link text: Log in]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='34' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should navigate to Login page successfully</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='35' status='pass'>
+	<span class='duration right label'>0h 0m 31s+580ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should Login successfully with valid credentials</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='36' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='37' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Login Link</span>
+				<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (8942a2fa25e8ccf7c58e0009488c110e)] -> link text: Log in]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='38' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter email "xyz13@gmail.com"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='39' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter password "abc123"</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='40' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I click on Login button</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='41' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should Login successfully</span>
+				<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (8942a2fa25e8ccf7c58e0009488c110e)] -> css selector: a.ico-account]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='42' status='pass'>
+	<span class='duration right label'>0h 4m 9s+629ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">User should Login successfully with valid credentials</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='43' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='44' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='45' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (8eea3c6abee2101ac80100862cb8aba7)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='46' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "xyz13@gmail.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='47' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "abc123"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='48' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='49' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (8eea3c6abee2101ac80100862cb8aba7)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='50' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='51' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='52' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (50fde5efcefaa7f12fe1fcd5673bc905)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='53' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "xyz1@gmail.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='54' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "abc1234"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='55' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='56' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (50fde5efcefaa7f12fe1fcd5673bc905)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='57' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='58' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='59' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (46579cc06d9d0646357af402f2c23469)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='60' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "ram111@yahoo.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='61' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "london3"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='62' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='63' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (46579cc06d9d0646357af402f2c23469)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='64' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='65' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='66' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (00ec4cc3835e1ef70c0b94d1bb4b478c)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='67' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "ram222@yahoo.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='68' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "london1"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='69' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='70' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (00ec4cc3835e1ef70c0b94d1bb4b478c)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='71' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='72' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='73' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (ef7272d5921c33f626701dc0fd5c9ee5)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='74' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "ram333@yahoo.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='75' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "london2"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='76' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='77' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (ef7272d5921c33f626701dc0fd5c9ee5)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='78' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='79' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='80' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (9db4c3ccfdad2cb30afed3395e90cb08)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='81' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "ram444@yahoo.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='82' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "london4"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='83' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='84' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (9db4c3ccfdad2cb30afed3395e90cb08)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='85' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">User should Login successfully with valid credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='86' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='87' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Login Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (f4be5e03405727ec4efa58b5309cd198)] -> link text: Log in]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='88' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email "ram555@yahoo.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='89' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter password "london5"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='90' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Login button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='91' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should Login successfully</span>
+							<div class='pre'>Verify text: My account is displayed on the Account Page [[ChromeDriver: chrome on WINDOWS (f4be5e03405727ec4efa58b5309cd198)] -> css selector: a.ico-account]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='92'>
+					<div class='test-heading'>
+						<span class='test-name'>Registration Feature</span>
+						<span class='test-time'>Apr 28, 2020 05:47:39 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='93' status='pass'>
+	<span class='duration right label'>0h 0m 17s+324ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should navigate to Register page successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='94' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='95' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Register Link</span>
+				<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (3b8fdd4c8315fac773cfc11f98410b5f)] -> xpath: //a[@class='ico-register']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='96' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should navigate to Register page successfully</span>
+				<div class='pre'>Verify Text: Your Personal Details is displayed on the Registeration Page[[ChromeDriver: chrome on WINDOWS (3b8fdd4c8315fac773cfc11f98410b5f)] -> xpath: //div[@class='page-body']//strong[text()='Your Personal Details']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='97' status='pass'>
+	<span class='duration right label'>0h 0m 34s+943ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">User should Register and create an account successfully</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='98' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given I am on Home page</span>
+				<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='99' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When I click on Register Link</span>
+				<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //a[@class='ico-register']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='100' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter first name "Harrow"</span>
+				<div class='pre'>Send text: Harrow to First Name field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='FirstName']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='101' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter last name "GS"</span>
+				<div class='pre'>Send text: GS to Last Name field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='LastName']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='102' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter day "18"</span>
+				<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='103' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter month "May"</span>
+				<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='104' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter year "1989"</span>
+				<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='105' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter random email address</span>
+				<div class='pre'>Send text: xyz71@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='Email']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='106' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter company name "GSTEST"</span>
+				<div class='pre'>Send text: GSTEST to company name field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='Company']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='107' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter register password "abc123"</span>
+				<div class='pre'>Send text: abc123 to password field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='Password']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='108' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I enter register confirm password "abc123"</span>
+				<div class='pre'>Send text: abc123 to confirm password field [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='ConfirmPassword']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='109' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And I click on Register button</span>
+				<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //input[@id='register-button']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='110' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I should be able to Register and create an account successfully</span>
+				<div class='pre'>Verify text: Your registration completed is displayed on registration completion [[ChromeDriver: chrome on WINDOWS (6f9c3215a1319c6af63a4665a53f5155)] -> xpath: //div[@class='master-wrapper-content']//div[text()='Your registration completed']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='111' status='pass'>
+	<span class='duration right label'>0h 1m 57s+63ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Verify error message when user tries to register account without entering first name</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='112' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify error message when user tries to register account without entering first name</span>
+			
+				<ul class='steps'>
+					<li test-id='113' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='114' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Register Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //a[@class='ico-register']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='115' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter last name "S"</span>
+							<div class='pre'>Send text: S to Last Name field [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='LastName']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='116' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter day "2"</span>
+							<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='117' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter month "February"</span>
+							<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='118' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter year "2008"</span>
+							<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='119' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email address "abc@gmail.com"</span>
+							<div class='pre'>Send text: abc@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='Email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='120' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter company name "Prime"</span>
+							<div class='pre'>Send text: Prime to company name field [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='Company']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='121' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register password "abc123"</span>
+							<div class='pre'>Send text: abc123 to password field [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='Password']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='122' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register confirm password "abc123"</span>
+							<div class='pre'>Send text: abc123 to confirm password field [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='ConfirmPassword']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='123' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Register button</span>
+							<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //input[@id='register-button']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='124' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see the error message "First name is required."</span>
+							<div class='pre'>Verify text: First name is required. when * marked mandatory fields are left empty [[ChromeDriver: chrome on WINDOWS (7daefe9a9d1c1fbfbf7418ddb9617eba)] -> xpath: //span[@class='field-validation-error']]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='125' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify error message when user tries to register account without entering first name</span>
+			
+				<ul class='steps'>
+					<li test-id='126' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='127' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Register Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //a[@class='ico-register']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='128' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter last name "S"</span>
+							<div class='pre'>Send text: S to Last Name field [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='LastName']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='129' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter day "8"</span>
+							<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='130' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter month "May"</span>
+							<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='131' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter year "2009"</span>
+							<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='132' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email address "def@gmail.com"</span>
+							<div class='pre'>Send text: def@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='Email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='133' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter company name "Testing"</span>
+							<div class='pre'>Send text: Testing to company name field [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='Company']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='134' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register password "def123"</span>
+							<div class='pre'>Send text: def123 to password field [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='Password']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='135' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register confirm password "def123"</span>
+							<div class='pre'>Send text: def123 to confirm password field [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='ConfirmPassword']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='136' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Register button</span>
+							<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //input[@id='register-button']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='137' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see the error message "First name is required."</span>
+							<div class='pre'>Verify text: First name is required. when * marked mandatory fields are left empty [[ChromeDriver: chrome on WINDOWS (2928dee75f722cb417afab195a0a6861)] -> xpath: //span[@class='field-validation-error']]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='138' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify error message when user tries to register account without entering first name</span>
+			
+				<ul class='steps'>
+					<li test-id='139' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='140' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Register Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //a[@class='ico-register']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='141' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter last name "SS"</span>
+							<div class='pre'>Send text: SS to Last Name field [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='LastName']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='142' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter day "29"</span>
+							<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='143' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter month "November"</span>
+							<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='144' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter year "2010"</span>
+							<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='145' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email address "ghi@gmail.com"</span>
+							<div class='pre'>Send text: ghi@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='Email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='146' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter company name "Square1"</span>
+							<div class='pre'>Send text: Square1 to company name field [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='Company']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='147' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register password "ghi123"</span>
+							<div class='pre'>Send text: ghi123 to password field [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='Password']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='148' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register confirm password "ghi123"</span>
+							<div class='pre'>Send text: ghi123 to confirm password field [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='ConfirmPassword']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='149' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Register button</span>
+							<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //input[@id='register-button']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='150' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see the error message "First name is required."</span>
+							<div class='pre'>Verify text: First name is required. when * marked mandatory fields are left empty [[ChromeDriver: chrome on WINDOWS (47a279d9a54ff19820410eeacf4627d3)] -> xpath: //span[@class='field-validation-error']]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='151' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify error message when user tries to register account without entering first name</span>
+			
+				<ul class='steps'>
+					<li test-id='152' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='153' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Register Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //a[@class='ico-register']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='154' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter last name "One"</span>
+							<div class='pre'>Send text: One to Last Name field [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='LastName']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='155' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter day "5"</span>
+							<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='156' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter month "February"</span>
+							<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='157' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter year "2014"</span>
+							<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='158' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email address "jkl@gmail.com"</span>
+							<div class='pre'>Send text: jkl@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='Email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='159' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter company name "Interior Collection"</span>
+							<div class='pre'>Send text: Interior Collection to company name field [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='Company']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='160' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register password "jkl123"</span>
+							<div class='pre'>Send text: jkl123 to password field [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='Password']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='161' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register confirm password "jkl123"</span>
+							<div class='pre'>Send text: jkl123 to confirm password field [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='ConfirmPassword']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='162' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Register button</span>
+							<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //input[@id='register-button']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='163' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see the error message "First name is required."</span>
+							<div class='pre'>Verify text: First name is required. when * marked mandatory fields are left empty [[ChromeDriver: chrome on WINDOWS (fae9a4cc65ec51d55d049cfcabd6af8b)] -> xpath: //span[@class='field-validation-error']]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='164' class='node scenario pass' status='pass'>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify error message when user tries to register account without entering first name</span>
+			
+				<ul class='steps'>
+					<li test-id='165' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I am on Home page</span>
+							<div class='pre'>I am on Home Page: https://demo.nopcommerce.com/</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='166' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I click on Register Link</span>
+							<div class='pre'>Clicking on login link : [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //a[@class='ico-register']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='167' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter last name "Two"</span>
+							<div class='pre'>Send text: Two to Last Name field [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='LastName']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='168' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter day "1"</span>
+							<div class='pre'>Select date of DOB from the drop down menu: [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //select[@name='DateOfBirthDay']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='169' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter month "January"</span>
+							<div class='pre'>Select month of DOB from the drop down menu:[[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //select[@name='DateOfBirthMonth']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='170' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter year "2020"</span>
+							<div class='pre'>Select year of DOB from drop down menu:[[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //select[@name='DateOfBirthYear']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='171' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter email address "mno@gmail.com"</span>
+							<div class='pre'>Send text: mno@gmail.com to email field [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='Email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='172' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter company name "HarrowGS"</span>
+							<div class='pre'>Send text: HarrowGS to company name field [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='Company']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='173' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register password "mno123"</span>
+							<div class='pre'>Send text: mno123 to password field [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='Password']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='174' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I enter register confirm password "mno123"</span>
+							<div class='pre'>Send text: mno123 to confirm password field [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='ConfirmPassword']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='175' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I click on Register button</span>
+							<div class='pre'>Click on Register button [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //input[@id='register-button']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='176' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I should see the error message "First name is required."</span>
+							<div class='pre'>Verify text: First name is required. when * marked mandatory fields are left empty [[ChromeDriver: chrome on WINDOWS (b835ce5e4540312087fb36fc262fdef6)] -> xpath: //span[@class='field-validation-error']]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>PrimeTesting</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>21</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 21</span>
+                                    
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:39:41 PM</td>
+                                                <td class='linked' test-id='2'>Book Feature.User should navigate to Book page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:40:15 PM</td>
+                                                <td class='linked' test-id='6'>Book Feature.User should see results on Book page sorted by AtoZ</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:40:48 PM</td>
+                                                <td class='linked' test-id='11'>Book Feature.User should see prices on Books page sorted by LowToHigh</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:41:13 PM</td>
+                                                <td class='linked' test-id='17'>Computer Feature.As a user I want to navigate to computer page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:41:37 PM</td>
+                                                <td class='linked' test-id='21'>Computer Feature.As a user I want to select Build my own Computer product successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:42:33 PM</td>
+                                                <td class='linked' test-id='31'>Login Feature.User should navigate to Login page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:42:54 PM</td>
+                                                <td class='linked' test-id='35'>Login Feature.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:43:27 PM</td>
+                                                <td class='linked' test-id='43'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:44:03 PM</td>
+                                                <td class='linked' test-id='50'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:44:39 PM</td>
+                                                <td class='linked' test-id='57'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:45:22 PM</td>
+                                                <td class='linked' test-id='64'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:45:57 PM</td>
+                                                <td class='linked' test-id='71'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:46:31 PM</td>
+                                                <td class='linked' test-id='78'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:05 PM</td>
+                                                <td class='linked' test-id='85'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:39 PM</td>
+                                                <td class='linked' test-id='93'>Registration Feature.User should navigate to Register page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:58 PM</td>
+                                                <td class='linked' test-id='97'>Registration Feature.User should Register and create an account successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:48:35 PM</td>
+                                                <td class='linked' test-id='112'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:48:58 PM</td>
+                                                <td class='linked' test-id='125'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:49:21 PM</td>
+                                                <td class='linked' test-id='138'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:49:44 PM</td>
+                                                <td class='linked' test-id='151'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:50:09 PM</td>
+                                                <td class='linked' test-id='164'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>Batch3</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>21</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 21</span>
+                                    
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:39:41 PM</td>
+                                                <td class='linked' test-id='2'>Book Feature.User should navigate to Book page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:40:15 PM</td>
+                                                <td class='linked' test-id='6'>Book Feature.User should see results on Book page sorted by AtoZ</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:40:48 PM</td>
+                                                <td class='linked' test-id='11'>Book Feature.User should see prices on Books page sorted by LowToHigh</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:41:13 PM</td>
+                                                <td class='linked' test-id='17'>Computer Feature.As a user I want to navigate to computer page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:41:37 PM</td>
+                                                <td class='linked' test-id='21'>Computer Feature.As a user I want to select Build my own Computer product successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:42:33 PM</td>
+                                                <td class='linked' test-id='31'>Login Feature.User should navigate to Login page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:42:54 PM</td>
+                                                <td class='linked' test-id='35'>Login Feature.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:43:27 PM</td>
+                                                <td class='linked' test-id='43'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:44:03 PM</td>
+                                                <td class='linked' test-id='50'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:44:39 PM</td>
+                                                <td class='linked' test-id='57'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:45:22 PM</td>
+                                                <td class='linked' test-id='64'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:45:57 PM</td>
+                                                <td class='linked' test-id='71'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:46:31 PM</td>
+                                                <td class='linked' test-id='78'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:05 PM</td>
+                                                <td class='linked' test-id='85'>Login Feature.User should Login successfully with valid credentials.User should Login successfully with valid credentials</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:39 PM</td>
+                                                <td class='linked' test-id='93'>Registration Feature.User should navigate to Register page successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:47:58 PM</td>
+                                                <td class='linked' test-id='97'>Registration Feature.User should Register and create an account successfully</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:48:35 PM</td>
+                                                <td class='linked' test-id='112'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:48:58 PM</td>
+                                                <td class='linked' test-id='125'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:49:21 PM</td>
+                                                <td class='linked' test-id='138'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:49:44 PM</td>
+                                                <td class='linked' test-id='151'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Apr 28, 2020 05:50:09 PM</td>
+                                                <td class='linked' test-id='164'>Registration Feature.Verify error message when user tries to register account without entering first name.Verify error message when user tries to register account without entering first name</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>149</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 28, 2020 05:39:41 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 28, 2020 05:50:36 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>655,545ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 21,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 0,
+				
+				passGrandChild: 149,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
